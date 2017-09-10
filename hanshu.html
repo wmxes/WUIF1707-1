@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hanshu</title>
+</head>
+<body>
+	<script>
+	// 任意行任意列表格
+		// function fn(rows,cols){
+		// 	document.write(`<table border=1 cellspacing=0> `);
+		// 		for(var i=1; i<=rows; i++){
+		// 			document.write(`<tr>`);
+		// 				for(j=1; j<=cols; j++){
+		// 					document.write(`<td>111</td>`);
+		// 				}	
+		// 			document.write(`</tr>`);
+		// 		}			
+		// 	document.write(`</table>`);
+		// }
+		// fn(20,20);
+
+
+
+
+	// 二维数组
+		// var z=[1,2,3,4,5],x=[2,3,4,5,6],c=[4,5,6,7,8];
+		// var d=[z,x,c];
+
+		// fn(d);
+		// function fn(arr){
+		// 	// var a=[1,2,3]; b=[4,5,6]; c=[7,8,9];
+		// 	// var arr=[a,b,c]
+		// 	var max=arr[0][0];
+		// 	for (var i=0; i<arr.length; i++){
+		// 		for (var j=0; j<arr[i].length; j++){
+		// 			if(max<arr[i][j]){
+		// 				max=arr[i][j];
+		// 			}
+		// 		}
+		// 	}
+		// 	console.log(max);
+		// }
+
+
+
+
+
+	// 金三角
+		// function fn(col){
+		// 	var table = `<table border=1 cellspacing=0>`;
+		// 	var color;
+		// 		for(var i=1; i<=col; i++){
+		// 			if (i%2==0){
+		// 				color = `yellow`;
+		// 			}else{
+		// 				color = `lightblue`;
+		// 			}
+		// 			table+=`<tr bgcolor=`+color+`>`;	
+		// 			for(j=1; j<=i; j++){
+						
+		// 				table+=`<td>`+i+`x`+j+`</td>`;
+		// 			}	
+		// 			table+=`</tr>`;
+		// 		}
+		// 		table += `</table>`
+		// 		document.write(table);
+		// }
+		// fn(20);
+
+
+		// function fn(row){
+		// 	var row;
+		// 	for (var i=1; i<=row; i++){
+		// 		for(var j=1; j<=row-i; j++){
+		// 			document.write('-');
+		// 		}
+		// 		for(var j=1; j<=2*i-1; j++){
+		// 			document.write('*');
+		// 		}
+		// 		document.write(`<br/>`);
+		// 	}
+		// 	for (var i=1; i<=row-1; i++){
+		// 		for(var j=1; j<i+1; j++){
+		// 			document.write('-');
+		// 		}
+		// 		for(var j=1; j<=2*row-2*i-1; j++){
+		// 			document.write('*');
+		// 		}
+		// 		document.write('<br/>')
+		// 	}
+		// }
+		// fn(11);
+
+
+
+// 加字符串
+		// var arr=[1,2,3,4,5,6,7,8,9];
+		// console.log(fn(arr,'a','b','c'));
+		// // function push (arr){
+		// // 	// console.log(arguments)
+		// // 	for (var i=1; i<arguments.length; i++){
+		// // 		arr[arr.length]=arguments[i];
+		// // 	}
+		// // 	console.log(arr);
+
+		// // }
+
+		// function fn(arr,...value){
+		// 	for (var i=0;i<value.length; i++){
+		// 		arr[arr.length]=value[i];
+		// 	}
+		// 	return arr;
+		// }
+
+// 升降序！！
+
+		arr=[1,2,3,4,6,7,8];
+
+		sort(arr,'>');
+		sort(arr,'<');
+
+		function sort(arr,type){
+
+			if(type==undefined){
+				type='>'
+			}
+
+			// type = type==undefined? '<':type;
+
+			// type= type ||'<';
+
+			if(type == '<'){
+				sortUp(arr);
+			}
+			if(type == '>'){
+				sortDown(arr);
+			}
+		}
+
+
+		function sortUp(arr){
+			for(var i=0;i<arr.length;i++){
+				for (var j=0;j<arr.length; j++){
+					if(arr[i]<arr[j]){
+						var temp=arr[i];
+						arr[i]=arr[j];
+						arr[j]=temp;
+					}
+				}
+			}
+			console.log(arr);
+		}
+		function sortDown(arr){
+			for(var i=0;i<arr.length;i++){
+				for (var j=0;j<arr.length; j++){
+					if(arr[i]>arr[j]){
+						var temp=arr[i];
+						arr[i]=arr[j];
+						arr[j]=temp;
+					}
+				}
+			}
+			console.log(arr);
+		}
+
+
+
+
+		
+
+		</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
