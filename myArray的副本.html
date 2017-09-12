@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		//indexOf  lastIndexOf includes  reverse  join  sort some every map filter
+
+
+		var arr = new myArray(1,3,4,2,5);
+		console.log(arr);
+
+		//arr.push('x','y');
+		//console.log(arr);
+
+        //let index =arr.indexOf('2');
+		//console.log(index);
+
+		//let index =arr.lastIndexOf('d');
+		//console.log(index);
+
+		// console.log(arr.reverse());
+		
+		//console.log(arr.join('-'));
+
+		//console.log(arr.sort());
+
+	    // console.log(arr.every(function(value){
+	    // 	return value>3;
+	    // }));
+	    // console.log(arr.some(function(value){
+	    // 	return value>3;
+	    // }));
+
+	    // console.log(arr.map(function(value){
+	    // 	return value*2;
+	    // }));
+	    // console.log(arr.filter(function(value){
+	    // 	return value%2==0;
+	    // }));
+	    //console.log(arr.splice(2,1,'x'));
+
+
+		function myArray(){
+			for(let i=0;i<arguments.length;i++){
+				this[i] = arguments[i];
+			}
+			this.length = arguments.length;
+			
+// /*添加*/		this.push = function(){
+// 				for(let i=0;i<arguments.length;i++){
+// 					this[this.length] = arguments[i];
+// 					this.length++;
+// 				}
+// 			}
+
+
+// /* 查找*/	this.indexOf = function(value){
+// 				for(let i=0;i<this.length;i++){
+// 					if(this[i]==value){
+// 						return i;
+// 					}
+// 				}
+// 				return -1;
+// 			}
+
+
+			// this.lastIndexOf = function(value){
+			// 	for(let i=this.length-1;i>=0;i--){
+			// 		if(this[i]==value){
+			// 			return i;
+			// 		}
+			// 	}
+			// 	return -1;
+			// }
+
+
+// /*reverse*/this.reverse =function(){
+// 				var newarr=[];
+// 				for(let i=this.length-1;i>=0;i--){
+// 					newarr[newarr.length]=this[i];
+// 				}
+// 				return newarr;
+// 			}
+
+
+// /*join*/	this.join = function(str){
+// 				var result='';
+// 				for(i=0;i<this.length;i++){
+// 					if(i==this.length-1){
+// 						result+=this[i];
+// 					}else{
+// 						result+=this[i]+str;
+// 					}
+// 				}
+// 				return result;
+// 			}
+
+
+// /*sort*/	this.sort =function(){
+// 				for(var i=0;i<this.length;i++){
+// 					for(var j=i+1;j<this.length;j++){
+// 						if(this[i]<this[j]){
+// 							var temp=this[i];
+// 							this[i]=this[j];
+// 							this[j]=temp;
+// 						}
+// 					}
+// 				}
+// 				return this;
+// 			}
+
+// /*some*/	this.every = function(fn){
+// 				for(let i=0;i<this.length;i++){
+// 					if(!fn(this[i])){
+// 						return false;
+// 					}
+// 				}
+// 				return true;
+// 				}
+// 			this.some = function(fn){
+// 				for(let i=0;i<this.length;i++){
+// 					if(fn(this[i])){
+// 						return true;
+// 					}
+// 				}
+// 				return false;
+// 				}
+// /*map*/		this.map = function(fn){
+// 				var newarr=[];
+// 				for(var i=0;i<this.length;i++){
+// 					newarr[newarr.length]=fn(this[i]);
+// 				}
+// 				return newarr;
+// 			}	
+
+// 			this.filter = function(fn){
+// 				var newarr=[];
+// 				for(var i=0;i<this.length;i++){
+// 					if(fn(this[i])){
+// 					newarr[newarr.length]=this[i];
+// 					}
+// 				}
+// 				return newarr;
+// 			}
+
+		// this.spliceAdd = function(a,pos,...rest){
+		// 	var newarr=[];
+		// 	for(var i=0;i<pos;i++){
+		// 		newarr[newarr.length]=a[i];
+		// 	}
+		// 	for(var i=0;i<rest.length;i++){
+		// 		newarr[newarr.length]=rest[i];
+		// 	}
+		// 	for(var i=pos;i<a.length;i++){
+		// 		newarr[newarr.length]=a[i];
+		// 	}
+		// 	return newarr;
+		// }
+		// this.spliceDelete = function(pos,num){
+		// 	var newarr=[];
+		// 	for(var i=0;i<this.length;i++){
+		// 		if(i>=pos&&i<pos+num){
+		// 			continue;
+		// 		}
+		// 		newarr[newarr.length]=this[i];
+		// 	}
+		// 	return newarr;
+		// }
+		// this.splice = function(pos,num,...rest){
+		// 	var newarr=[];
+		// 	newarr=this.spliceDelete(pos,num);
+		// 	if(rest.length>0){
+		// 		newarr=this.spliceAdd(newarr,pos,...rest);
+		// 	}
+		// 	return newarr;
+		// }
+
+
+		}
+
+
+
+	</script>
+</body>
+</html>
